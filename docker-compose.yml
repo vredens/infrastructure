@@ -1,0 +1,24 @@
+version: "3.5"
+
+services:
+
+  psql:
+    build:
+      context: .
+      dockerfile: assets/docker/psql.test.dockerfile
+    restart: always
+    hostname: postgres
+    network_mode: bridge
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+
+  sqs:
+    image: localstack/localstack
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: sqs

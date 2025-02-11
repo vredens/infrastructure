@@ -1,0 +1,16 @@
+{
+  "valid-consumer-1": {
+    "arn": "arn://messaging/nsq/consumers/sample-1",
+    "topic": "topic-1",
+    "channel": "channel-1"
+  },
+  "valid-consumer-2": {
+    "arn": "arn://messaging/nsq/consumers/sample-2",
+    "topic": "topic-2",
+    "channel": "channel-2"
+  },
+  "valid-producer-1": {
+    "arn": "arn://messaging/nsq/producers/sample-1",
+    "topic": "topic-1"
+  }
+}

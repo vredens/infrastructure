@@ -1,0 +1,120 @@
+{
+	"storage": {
+		"algolia": {
+			"sample-1": {
+				"application_id": "",
+				"api_key": "",
+				"index_prefix": ""
+			}
+		},
+		"elasticsearch": {
+			"sample-1": {
+				"hosts": ["http://elasticsearch:9200"],
+				"index_prefix": "snav-local-"
+			}
+		},
+		"postgres": {
+			"sample-1": {
+				"host": "127.0.0.1",
+				"port": 5432,
+				"database": "",
+				"user": "",
+				"password": "",
+				"params": {
+					"sslmode": "disabled"
+				}
+			}
+		},
+		"redis": {
+			"sample-1": {
+				"sentinels": ["127.0.0.1:26379"],
+				"master_name": "",
+				"password": "",
+				"db": 0
+			},
+			"sample-2": {
+				"address": "127.0.0.1:6379",
+				"password": "",
+				"db": 0
+			}
+		},
+		"s3": {
+			"sample-1": {
+				"bucket": "",
+				"session": {
+					"endpoint": "",
+					"region": "",
+					"role": "",
+					"disable_ssl": false,
+					"force_path_style": false,
+					"disable_endpoint_host_prefix": false,
+					"credentials": {
+						"access_key_id": "",
+						"secret_access_key": "",
+						"token": ""
+					}
+				}
+			}
+		}
+	},
+	"messaging": {
+		"kinesis": {
+			"consumers": {
+				"sample-1":{
+					"stream": ""
+				},
+				"sample-2":{
+					"stream": "",
+					"aws": {
+						"endpoint": "",
+						"region": ""
+					}
+				}
+			},
+			"producers": {
+				"sample-1":{
+					"stream": ""
+				},
+				"sample-2":{
+					"stream": "",
+					"aws": {
+						"endpoint": "",
+						"region": ""
+					}
+				}
+			}
+		},
+		"nsq": {
+			"consumers": {
+				"sample-1": {
+					"nsqd": ["nsqd:4150"]
+				},
+				"sample-2": {
+					"lookupd": ["lookupd:4160"]
+				},
+				"sample-3": {
+					"lookupd": ["lookupd:4160"],
+					"with_topic_prefix": false,
+					"with_channel_prefix": false
+				}
+			},
+			"producers": {
+				"sample-1": {
+					"nsqd": ["nsqd:4150"]
+				},
+				"sample-2": {
+					"nsqd": ["nsqd:4160"],
+					"with_topic_prefix": false
+				}
+			}
+		}
+	},
+	"webservices": {
+		"sample-1": {
+			"url": "https://sample-1.dev.worten.net",
+			"headers": {
+				"key": "value"
+			}
+		}
+	}
+}

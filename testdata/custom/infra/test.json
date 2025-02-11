@@ -1,0 +1,166 @@
+{
+	"cloud": {
+		"aws": {
+			"account-1": {
+				"endpoint": "",
+				"region": "",
+				"role": "",
+				"disable_ssl": false,
+				"force_path_style": false,
+				"disable_endpoint_host_prefix": false,
+				"credentials": {
+					"access_key_id": "",
+					"secret_access_key": "",
+					"token": ""
+				}
+			}
+		}
+	},
+	"storage": {
+		"elasticsearch": {
+			"sample-1": {
+				"hosts": ["http://elasticsearch:9200"],
+				"username": "",
+				"password": "",
+				"index_prefix": "snav-local-"
+			}
+		},
+		"postgres": {
+			"sample-1": {
+				"host": "127.0.0.1",
+				"port": 5432,
+				"database": "",
+				"user": "",
+				"password": ""
+			}
+		},
+		"redis": {
+			"sample-1": {
+				"sentinels": ["127.0.0.1:26379"],
+				"master_name": "",
+				"password": "",
+				"db": 0
+			},
+			"sample-2": {
+				"address": "127.0.0.1:6379",
+				"password": "",
+				"db": 0
+			}
+		},
+		"s3": {
+			"sample-1": {
+				"bucket": "",
+				"session": {
+					"endpoint": "",
+					"region": "",
+					"role": "",
+					"disable_ssl": false,
+					"force_path_style": false,
+					"disable_endpoint_host_prefix": false,
+					"credentials": {
+						"access_key_id": "",
+						"secret_access_key": "",
+						"token": ""
+					}
+				}
+			}
+		},
+		"sftp": {
+			"simple": {
+				"host": "localhost",
+				"user": "username",
+				"pass": "password"
+			},
+			"with-hostkey": {
+				"host": "localhost",
+				"user": "username",
+				"pass": "password",
+				"hostkey": "HOSTKEY_FOR_MIM_SAFETY"
+			},
+			"private-key": {
+				"host": "localhost",
+				"user": "username",
+				"private-key": {
+					"value": "YOUR_RSA_KEY or use a template {{ .Env.MY_PRIVATE_KEY }}",
+					"passphrase": "if your key requires one, otherwise this is optional"
+				}
+			},
+			"private-key-file": {
+				"host": "localhost",
+				"user": "username",
+				"private-key": {
+					"path": "/path/to/your/private/key",
+					"passphrase": "if your key requires one, otherwise this is optional"
+				}
+			},
+			"dual-method": {
+				"host": "localhost",
+				"user": "username",
+				"pass": "password",
+				"private-key": {
+					"value": "YOUR_RSA_KEY or use a template {{ .Env.MY_PRIVATE_KEY }}",
+					"passphrase": "if your key requires one, otherwise this is optional"
+				}
+			}
+		}
+	},
+	"messaging": {
+		"kinesis": {
+			"consumers": {
+				"sample-1":{
+					"stream": "",
+					"aws": {
+						"endpoint": "",
+						"region": ""
+					}
+				}
+			},
+			"producers": {
+				"sample-1":{
+					"stream": "",
+					"aws": {
+						"endpoint": "",
+						"region": ""
+					}
+				}
+			}
+		},
+		"nsq": {
+			"consumers": {
+				"sample-1": {
+					"nsqd": ["nsqd:4150"],
+					"topic_prefix": "{{ .Environment }}-",
+					"topic_suffix": "",
+					"channel_prefix": "{{ .Environment }}-{{ .System }}-{{ .Component }}-",
+					"channel_suffix": ""
+				},
+				"sample-2": {
+					"lookupd": ["nsqd:4160"]
+				}
+			},
+			"producers": {
+				"sample-1": {
+					"nsqd": ["nsqd:4160"],
+					"topic_prefix": "{{ .Environment }}-",
+					"topic_suffix": ""
+				}
+			}
+		},
+		"kafka":{
+			"clusters":{
+				"c1":{
+					"brokers":[
+						"localhost:9092"
+					],
+					"username": "{{ .Env.INFRA_KAFKA_USERNAME }}",
+					"password": "{{ .Env.INFRA_KAFKA_PASSWORD }}"
+				}
+			}
+		}
+	},
+	"webservices": {
+		"sample-1": {
+			"url": "https://example.com"
+		}
+	}
+}

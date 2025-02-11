@@ -1,0 +1,9 @@
+{
+    "repo": {
+        "arn": "arn://messaging/kafka/clusters/c1",
+        "params": {
+            "topic": "topic-x",
+            "group": "group-y"
+        }
+    }
+}

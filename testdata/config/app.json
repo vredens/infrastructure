@@ -1,0 +1,74 @@
+{
+	"repo-1": {
+		"arn": "arn://storage/elasticsearch/sample-1",
+		"params": {
+			"timeout": 10,
+			"max_idle_connections": 20
+		}
+	},
+	"repo-2": {
+		"arn": "arn://storage/postgres/sample-1",
+		"params": {
+			"max_connections": 10
+		}
+	},
+	"repo-3": {
+		"arn": "arn://storage/redis/sample-1"
+	},
+	"repo-4": {
+		"arn": "arn://storage/s3/sample-1"
+	},
+	"repo-5": {
+		"arn": "arn://storage/algolia/sample-1"
+	},
+	"repo-6": {
+		"arn": "arn://storage/elasticsearch/sample-1",
+		"params":{
+			"password": "never-use-this-pass-{{ .Environment }}-{{ .System }}-{{ .Component }}"
+		}
+	},
+	"repo-7": {
+		"arn": "arn://storage/elasticsearch/sample-1",
+		"params":{
+			"username": "useruser",
+			"username3": "this is a {{ .Env.INFRA_KAFKA_USERNAME }}"
+		}
+	},
+	"inbox-1": {
+		"arn": "arn://messaging/kinesis/consumers/sample-1",
+		"params": {
+			"group": "my-consumer-group"
+		}
+	},
+	"inbox-2": {
+		"arn": "arn://messaging/nsq/consumers/sample-1",
+		"params": {
+			"topic": "topic",
+			"channel": "channel",
+			"concurrency": 5,
+			"requeue_delay": 10,
+			"max_requeue_delay": 60,
+			"max_attempts": 50
+		}
+	},
+	"outbox-1": {
+		"arn": "arn://messaging/kinesis/producers/sample-1"
+	},
+	"outbox-2": {
+		"arn": "arn://messaging/nsq/producers/sample-1",
+		"params": {
+			"topic": "topic"
+		}
+	},
+	"websvc-1": {
+		"arn": "arn://webservices/sample-1",
+		"params": {
+			"connection": {
+				"max_idle": 10,
+				"max_per_host": 20,
+				"keep_alive": 30
+			},
+			"timeout": 5000
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"repo": {
+		"arn": "arn://storage/elasticsearch/sample-1",
+		"params": {
+			"timeout": 15,
+			"max_idle_connections": 10
+		}
+	}
+}

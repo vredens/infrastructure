@@ -1,0 +1,25 @@
+{
+  "messaging":{
+    "nsq":{
+      "consumers": {
+        "sample-1": {
+          "nsqd": ["nsqd:4150"],
+          "topic_prefix": "{{ .Environment }}-{{ .System }}-",
+          "topic_suffix": "-{{ .Component }}",
+          "channel_prefix": "{{ .Environment }}-{{ .System }}-",
+          "channel_suffix": "-{{ .Component }}"
+        },
+        "sample-2": {
+          "lookupd": ["nsqd:4160"]
+        }
+      },
+      "producers": {
+        "sample-1": {
+          "nsqd": ["nsqd:4160"],
+          "topic_prefix": "{{ .Environment }}-{{ .System }}-",
+          "topic_suffix": "-{{ .Component }}"
+        }
+      }
+    }
+  }
+}

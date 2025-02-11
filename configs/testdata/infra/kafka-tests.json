@@ -1,0 +1,49 @@
+{
+  "messaging": {
+    "kafka":  {
+      "clusters": {
+        "local": {
+          "brokers": ["localhost:9092"],
+          "username":"test-user-a",
+          "password":"test-pass-a",
+          "topic_prefix": "tpa-",
+          "topic_suffix": "-tsa",
+          "group_prefix": "gpa-",
+          "group_suffix": "-gsa"
+        },
+        "local-translations": {
+          "brokers": ["localhost:9092"],
+          "username":"test-user-a",
+          "password":"test-pass-a",
+          "topic_prefix": "tpa-",
+          "topic_suffix": "-tsa",
+          "group_prefix": "gpa-",
+          "group_suffix": "-gsa",
+          "topic_translation": {
+            "my-topic": "our-topic"
+          }
+        }
+      },
+      "consumers": {
+        "local": {
+          "brokers": ["localhost:9092"],
+          "username":"test-user-b",
+          "password":"test-pass-b",
+          "topic_prefix": "tpb-",
+          "topic_suffix": "-tsb",
+          "group_prefix": "gpb-",
+          "group_suffix": "-gsb"
+        }
+      },
+      "producers": {
+        "local": {
+          "brokers": ["localhost:9092"],
+          "username":"test-user-c",
+          "password":"test-pass-c",
+          "topic_prefix": "tpc-",
+          "topic_suffix": "-tsc"
+        }
+      }
+    }
+  }
+}

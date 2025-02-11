@@ -1,0 +1,10 @@
+{
+	"repo-6": {
+		"arn": "arn://storage/elasticsearch/sample-1",
+		"params":{
+			"password": "test",
+			"password2": "{{ .test }}",
+			"password3": "this is a {{ .Environment }}"
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "storage": {
+    "postgres":{
+      "valid-1": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "postgres",
+        "user": "{{ .Env.PSQL_USER }}",
+        "password": "{{ .Env.PSQL_PASS }}"
+      },
+      "valid-2": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "postgres",
+        "user": "{{ .Env.INFRA_PSQL_USER }}",
+        "password": "{{ .Env.INFRA_PSQL_PASS }}"
+      },
+      "valid-3": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "postgres",
+        "user": "{{ .Env.INFRA_PSQL_USER }}",
+        "password": "{{ .Env.INFRA_PSQL_PASS }}",
+        "params": {
+          "x": 1,
+          "y": "27"
+        }
+      }
+    }
+  }
+}

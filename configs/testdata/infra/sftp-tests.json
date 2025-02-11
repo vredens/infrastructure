@@ -1,0 +1,70 @@
+{
+  "storage": {
+    "sftp": {
+      "valid-1": {
+        "host": "localhost",
+        "user": "user",
+        "pass": "pass"
+      },
+      "valid-2": {
+        "host": "localhost",
+        "port": 22,
+        "user": "user",
+        "private_key": {
+          "value": "private_key"
+        },
+        "host_key": "hostkey"
+      },
+      "valid-3": {
+        "host": "localhost",
+        "port": 22,
+        "user": "user",
+        "private_key": {
+          "path": "/path/to/private_key",
+          "passphrase": "passphrase"
+        },
+        "host_key": "hostkey"
+      },
+      "valid-4": {
+        "host": "localhost",
+        "port": 22,
+        "user": "user",
+        "private_key": {
+          "value": "private_key",
+          "passphrase": "passphrase"
+        }
+      },
+      "valid-5": {
+        "host": "localhost",
+        "port": 22,
+        "user": "user",
+        "pass": "pass",
+        "private_key": {
+          "value": "private_key",
+          "passphrase": "passphrase"
+        },
+        "host_key": "hostkey"
+      },
+      "invalid-1": {
+        "host": "localhost",
+        "port": 22,
+        "user": "user",
+        "pass": "pass",
+        "private_key": {
+          "passphrase": "passphrase"
+        },
+        "host_key": "hostkey"
+      },
+      "invalid-2": {
+        "host": "localhost",
+        "port": 22,
+        "user": "user",
+        "private_key": {
+          "value": "private_key",
+          "path": "/path/to/private_key",
+          "passphrase": "passphrase"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+	"kafka": {
+		"test-1": {
+			"arn": "arn://messaging/kafka/clusters/local",
+			"topic": "my-topic",
+			"group": "my.group"
+		},
+		"test-2": {
+			"arn": "arn://messaging/kafka/consumers/local",
+			"topic": "my-topic",
+			"group": "my.group"
+		},
+		"test-3": {
+			"arn": "arn://messaging/kafka/clusters/local",
+			"topic": "my-topic"
+		},
+		"test-4": {
+			"arn": "arn://messaging/kafka/producers/local",
+			"topic": "my-topic"
+		},
+		"test-5": {
+			"arn": "arn://messaging/kafka/clusters/local-translations",
+			"topic": "my-topic"
+		}
+	}
+}

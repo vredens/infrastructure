@@ -1,0 +1,8 @@
+{
+  "valid-1": {
+    "arn": "arn://storage/postgres/valid-1"
+  },
+  "valid-2": {
+    "arn": "arn://storage/postgres/valid-2"
+  }
+}

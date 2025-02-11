@@ -1,0 +1,24 @@
+{
+	"repo-1": {
+		"params": {
+			"timeout": 15,
+			"max_idle_connections": 10
+		}
+	},
+	"repo-2": {
+		"arn": "arn://storage/elasticsearch/sample-2",
+		"params": {
+			"timeout": 20,
+			"max_idle_connections": 40
+		}
+	},
+	"repo-3": {
+		"arn": "arn://storage/redis/sample-1"
+	},
+	"repo-4": {
+		"arn": "arn://storage/s3/sample-1"
+	},
+	"repo-5": {
+		"arn": "arn://storage/algolia/sample-1"
+	}
+}
